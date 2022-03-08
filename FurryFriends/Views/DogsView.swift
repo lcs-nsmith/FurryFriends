@@ -148,8 +148,7 @@ struct DogsView: View {
             
             // Writes the JSON formatted data to a file in the filename location derived in 'getDocumentDirectory'
             // .atomicWrite means the write will either succeed or fail, it won't write part of a file
-            // .completeFileProtection means that the data will be encrypted
-            try data.write(to: filename, options: [.atomicWrite, .completeFileProtection])
+            try data.write(to: filename, options: [.atomicWrite])
             
             // Diagnostics
             print("* data write successful *")
